@@ -27,23 +27,23 @@ def directors_totals(nds)
   # end  
   # return result
   
-  result = {}
-  index = 0
-  while index < nds.size do
-    name = nds[index]
-    result[name[:name]] = gross_for_director(name)
-    index += 1
-  end
+  # result = {}
+  # index = 0
+  # while index < nds.size do
+  #   name = nds[index]
+  #   result[name[:name]] = gross_for_director(name)
+  #   index += 1
+  # end
   
   
-  #   retHash = {}
-  # nds.length.times do |index_i|
-  #   name = nds[index_i][:name]
-  #   retHash[name] = 0
-  #   nds[index_i][:movies].length.times do |index_j|
-  #       retHash[name]+=nds[index_i][:movies][index_j][:worldwide_gross]
-  #   end 
-  # end  
-  # return retHash
+    retHash = {}
+  nds.length.times do |index_i|
+    name = nds[index_i][:name]
+    retHash[name] = 0
+    nds[index_i][:movies].length.times do |index_j|
+        retHash[name]+=nds[index_i][:movies][index_j][:worldwide_gross]
+    end 
+  end  
+  return retHash
 end
 
