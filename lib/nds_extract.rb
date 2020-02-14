@@ -5,14 +5,14 @@ require 'directors_database'
 # using director_data as input
 def gross_for_director(director_data)
   retVal = 0
-  # director_data[:movies].length.times do |index|
-  #   retVal += director_data[:movies][index][:worldwide_gross]
-  # end
-  index = 0
-  while index < director_data[:movies].length do
+  director_data[:movies].length.times do |index|
     retVal += director_data[:movies][index][:worldwide_gross]
-    index += 1
   end
+  # index = 0
+  # while index < director_data[:movies].length do
+  #   retVal += director_data[:movies][index][:worldwide_gross]
+  #   index += 1
+  # end
   return retVal
 end
 
