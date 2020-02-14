@@ -8,11 +8,6 @@ def gross_for_director(director_data)
   director_data[:movies].length.times do |index|
     retVal += director_data[:movies][index][:worldwide_gross]
   end
-  # index = 0
-  # while index < director_data[:movies].length do
-  #   retVal += director_data[:movies][index][:worldwide_gross]
-  #   index += 1
-  # end
   return retVal
 end
 
@@ -26,24 +21,5 @@ def directors_totals(nds)
     result[nds[index][:name]] = gross_for_director(nds[index])
   end  
   return result
-  
-  # result = {}
-  # index = 0
-  # while index < nds.size do
-  #   name = nds[index]
-  #   result[name[:name]] = gross_for_director(name)
-  #   index += 1
-  # end
-  
-  
-  #   retHash = {}
-  # nds.length.times do |index_i|
-  #   name = nds[index_i][:name]
-  #   retHash[name] = 0
-  #   nds[index_i][:movies].length.times do |index_j|
-  #       retHash[name]+=nds[index_i][:movies][index_j][:worldwide_gross]
-  #   end 
-  # end  
-  # return retHash
 end
 
