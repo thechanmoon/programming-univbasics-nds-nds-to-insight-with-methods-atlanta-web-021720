@@ -21,11 +21,11 @@ end
 #
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
-  # result = {}
-  # nds.length.times do |index|
-  #   result[nds[index][:name]] = gross_for_director(nds[index])
-  # end  
-  # return result
+  result = {}
+  nds.length.times do |index|
+    result[nds[index][:name]] = gross_for_director(nds[index])
+  end  
+  return result
   
   # result = {}
   # index = 0
@@ -36,14 +36,14 @@ def directors_totals(nds)
   # end
   
   
-    retHash = {}
-  nds.length.times do |index_i|
-    name = nds[index_i][:name]
-    retHash[name] = 0
-    nds[index_i][:movies].length.times do |index_j|
-        retHash[name]+=nds[index_i][:movies][index_j][:worldwide_gross]
-    end 
-  end  
-  return retHash
+  #   retHash = {}
+  # nds.length.times do |index_i|
+  #   name = nds[index_i][:name]
+  #   retHash[name] = 0
+  #   nds[index_i][:movies].length.times do |index_j|
+  #       retHash[name]+=nds[index_i][:movies][index_j][:worldwide_gross]
+  #   end 
+  # end  
+  # return retHash
 end
 
